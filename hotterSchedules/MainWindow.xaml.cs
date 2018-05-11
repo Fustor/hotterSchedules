@@ -20,9 +20,24 @@ namespace hotterSchedules
     /// </summary>
     public partial class MainWindow : Window
     {
+        String username;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void enterButton_Click(object sender, RoutedEventArgs e)
+        {
+            username = usernameTextBox.Text;
+            MessageBox.Show(username);
+            Window1 Window = new Window1();
+            Window.Show();
+            this.Close();
+        }
+
+        private void CreateNewButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

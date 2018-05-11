@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:hotterSchedules"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Label x:Name="titleLable" Content="Hotter Schedules" HorizontalAlignment="Left" Height="27" Margin="47,30,0,0" VerticalAlignment="Top" Width="435" HorizontalContentAlignment="Center"/>
+        <Button x:Name="enterButton" Content="Enter" HorizontalAlignment="Left" Margin="220,167,0,0" VerticalAlignment="Top" Width="75" Click="enterButton_Click"  />
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Height="23" Margin="220,118,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="RestaurantTextBox" HorizontalAlignment="Left" Height="23" Margin="220,90,0,0" TextWrapping="Wrap" Text="Restaurant" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="CreateNewButton" Content="Create New" HorizontalAlignment="Left" Margin="220,192,0,0" VerticalAlignment="Top" Width="75" Click="CreateNewButton_Click"/>
     </Grid>
 </Window>
