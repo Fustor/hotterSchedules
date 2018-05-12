@@ -13,5 +13,6 @@ namespace hotterSchedules
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Restaurant> Restaurants { get; set; }
 
+
     }
 }
