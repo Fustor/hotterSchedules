@@ -11,7 +11,7 @@ namespace hotterSchedules
     {
         String name;
         List<Employee> EmployeeList;
-        Schedule CurrentSchedule;
+        List<Schedule> CurrentSchedules;
         
     }
 }

@@ -8,7 +8,17 @@ namespace hotterSchedules
 {
     public class Schedule
     {
-        
+        int numberOfDays;
+        List<WorkDay> daysWorking;
 
+
+    }
+
+    public struct WorkDay
+    {
+        DateTime day;
+        String clockIn;
+        String clockOut;
+        String position;
     }
 }
