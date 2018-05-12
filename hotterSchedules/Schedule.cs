@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace hotterSchedules
 {
-    class Schedule
+    public class Schedule
     {
-
+        
 
     }
 }
