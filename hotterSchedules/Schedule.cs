@@ -8,5 +8,7 @@ namespace hotterSchedules
 {
     class Schedule
     {
+
+
     }
 }
