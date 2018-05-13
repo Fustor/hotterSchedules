@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,17 +9,20 @@ namespace hotterSchedules
 {
     public class Schedule
     {
-        int numberOfDays;
-        List<WorkDay> daysWorking;
+        [Key]
+        public int scheduleID { get; set; }
+        public int numberOfDays { get; set; }
+        public List<WorkDay> daysWorking { get; set; }
 
-
+        [Required]
+        public virtual Employee Employee { get; set; }
     }
 
     public struct WorkDay
     {
-        DateTime day;
-        String clockIn;
-        String clockOut;
-        String position;
+        public DateTime day;
+        public String clockIn;
+        public String clockOut;
+        public String position;
     }
 }

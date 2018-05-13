@@ -21,15 +21,47 @@ namespace hotterSchedules
     public partial class MainWindow : Window
     {
         String username;
+        
         public MainWindow()
         {
+            // var context = new MyContext();
+            /*  ******fiddling with creating and saving data********
+            List<string> Jobs = new List<string>();
+            Jobs.Add("host");
+            Jobs.Add("togo");
+            Employee first = new Employee("Dave", Jobs,123);
+            Restaurant uno = new Restaurant(222, "chilis");
+            uno.EmployeeList.Add(first);
+            context.Restaurants.Add(uno);
+            context.Employees.Add(first);
+            context.SaveChanges();
+            */
+
+
+            /*  *******Checking if values were saved***** Saved multiple times**********
+            var rants = (from s in context.Restaurants orderby s.name select s).ToList<Restaurant>();
+            foreach(var a in rants)
+            {
+                string nam = a.name;
+                MessageBox.Show(nam);
+            }
+            */
+            
+            var context = new MyContext();
+           
             InitializeComponent();
         }
 
         private void enterButton_Click(object sender, RoutedEventArgs e)
         {
+            var context = new MyContext();
+
+            String RestaurantName = RestaurantTextBox.Text;
+            var SelectedRestaurant = (from s in context.Restaurants where s.name == RestaurantName select s );//grabs entities where their .name is equal to RestaurantName
+            Restaurant curRest = SelectedRestaurant.Single();//creates a Restaurant object curRest from a Single entity selected above, error is more than one is selected
             username = usernameTextBox.Text;
-            MessageBox.Show(username);
+            Employee emp = new Employee(username, 2223);
+            MessageBox.Show(username + curRest.name);
             Window1 Window = new Window1();
             Window.Show();
             this.Close();

@@ -9,9 +9,13 @@ namespace hotterSchedules
 {
     public class MyContext: DbContext
     {
-        public virtual DbSet<Schedule> Schedules { get; set; }
-        public virtual DbSet<Employee> Employees { get; set; }
+        public MyContext() : base("LocalHotterSchedulesDb") { }
+
         public virtual DbSet<Restaurant> Restaurants { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Schedule> Schedules { get; set; }
+        
+       
 
 
     }
