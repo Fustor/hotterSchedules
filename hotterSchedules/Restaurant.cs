@@ -10,7 +10,7 @@ namespace hotterSchedules
 {
     public class Restaurant
     {
-        public Restaurant(int id,string restName)
+        public Restaurant(String id,string restName)
         {
             restaurantID = id;
             name = restName;
@@ -21,7 +21,7 @@ namespace hotterSchedules
 
         }
         [Key]
-        public int restaurantID { get; set; }
+        public String restaurantID { get; set; }
 
         public String name { get; set; }
         public virtual List<Employee> EmployeeList { get; set; }

@@ -10,7 +10,7 @@ namespace hotterSchedules
 {
     public class Employee
     {
-        public Employee(string employeeName,int id)
+        public Employee(string employeeName,String id)
         {
             name = employeeName;
             
@@ -18,7 +18,7 @@ namespace hotterSchedules
         }
 
         [Key]
-        public int EmployeeID { get; set; }
+        public String EmployeeID { get; set; }
 
         public String name { get; set; }
         public List<String> Jobs { get; set; }

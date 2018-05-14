@@ -63,6 +63,9 @@
     </ApplicationDefinition>
     <Compile Include="Employee.cs" />
     <Compile Include="MyContext.cs" />
+    <Compile Include="NewItemWindow.xaml.cs">
+      <DependentUpon>NewItemWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Restaurant.cs" />
     <Compile Include="Schedule.cs" />
     <Compile Include="Window1.xaml.cs">
@@ -80,6 +83,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NewItemWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

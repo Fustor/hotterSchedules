@@ -79,13 +79,14 @@ namespace hotterSchedules
             if(SelectedRestaurant.Count() > 1)
             {
                 //create new window asking for restaurantID, select that restaurant from list of current restaurants
+
             }
             else
             {
                 MessageBox.Show(RestaurantName + " was not found.");
             }
             
-            Employee emp = new Employee(username, 2223);
+            Employee emp = new Employee(username, "2234");
             
             
         }
@@ -97,6 +98,8 @@ namespace hotterSchedules
              * close and open corresponding creation window
              * add to db and take back to main window
              */
+            NewItemWindow NewItemWin = new NewItemWindow();
+            NewItemWin.Show();
         }
     }
 }
