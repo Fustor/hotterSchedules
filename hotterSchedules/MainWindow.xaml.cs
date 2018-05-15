@@ -86,7 +86,7 @@ namespace hotterSchedules
                 MessageBox.Show(RestaurantName + " was not found.");
             }
             
-            Employee emp = new Employee(username, "2234");
+            //Employee emp = new Employee(username, "2234");
             
             
         }

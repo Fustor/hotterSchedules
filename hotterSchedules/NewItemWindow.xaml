@@ -9,10 +9,10 @@
     <Grid>
         <RadioButton x:Name="NewEmployeeRadioButton" Content="New Employee" HorizontalAlignment="Left" Margin="29,40,0,0" VerticalAlignment="Top" GroupName="NewItemButton" Checked="NewEmployeeRadioButton_Checked"/>
         <RadioButton x:Name="NewRestaurantRadioButton" Content="New Restaurant" HorizontalAlignment="Left" Margin="167,40,0,0" VerticalAlignment="Top" GroupName="NewItemButton" Checked="NewRestaurantRadioButton_Checked"/>
-        <TextBox x:Name="NameTextbox" HorizontalAlignment="Left" Height="23" Margin="29,84,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="IDTextbox" HorizontalAlignment="Left" Height="23" Margin="29,125,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="NameTextbox" GotFocus="TextBox_GotFocus" HorizontalAlignment="Left" Height="23" Margin="29,84,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="IDTextbox" GotFocus="TextBox_GotFocus" HorizontalAlignment="Left" Height="23" Margin="29,125,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="SubmitNewItemButton" Content="Submit" HorizontalAlignment="Left" Margin="29,204,0,0" VerticalAlignment="Top" Width="75" Click="SubmitNewItemButton_Click"/>
         <Button x:Name="CancelNewItemButton" Content="Cancel" HorizontalAlignment="Left" Margin="154,204,0,0" VerticalAlignment="Top" Width="75" Click="CancelNewItemButton_Click"/>
-        <TextBox x:Name="EmployeeRestaurantIDTextbox" HorizontalAlignment="Left" Height="23" Margin="29,165,0,0" TextWrapping="Wrap" Text="Restaurant ID" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="EmployeeRestaurantIDTextbox" GotFocus="TextBox_GotFocus" HorizontalAlignment="Left" Height="23" Margin="29,165,0,0" TextWrapping="Wrap" Text="Restaurant ID" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
     </Grid>
 </Window>

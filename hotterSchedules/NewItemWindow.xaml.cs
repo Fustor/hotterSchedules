@@ -39,16 +39,24 @@ namespace hotterSchedules
             {
                 String RestaurantID = EmployeeRestaurantIDTextbox.Text;
                 Employee NewEmployee = new Employee(Name, ID);
-                using (var db = new MyContext())//adds the employee to their restaurants employeeList
+                using (var db = new MyContext())//adds the employee to their restaurants employeeList and creates employee
                 {
+                   
                     var CurrentRestaurant = db.Restaurants.SingleOrDefault(b => b.restaurantID == RestaurantID);
                     if (CurrentRestaurant != null)
                     {
-                        CurrentRestaurant.EmployeeList.Add(NewEmployee);
+
+                        CurrentRestaurant.AddEmployee(NewEmployee.EmployeeID);
+                        db.Employees.Add(NewEmployee);
                         db.SaveChanges();
+
+
+
+
+
+
                     }
-                    db.Employees.Add(NewEmployee);
-                    db.SaveChanges();
+                    
                 }
                 this.Close();
                
@@ -58,7 +66,7 @@ namespace hotterSchedules
                 //figure out how to select the restaurant they are added to
             }
 
-            else if(NewRestaurantRadioButton.IsChecked == true)
+            else if(NewRestaurantRadioButton.IsChecked == true)//creates new restaurant with unique id
             {
                 using(var db  = new MyContext())
                 {
@@ -93,6 +101,13 @@ namespace hotterSchedules
         private void NewRestaurantRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             EmployeeRestaurantIDTextbox.IsEnabled = false;
+        }
+
+        public void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBox_GotFocus;
         }
     }
 }
