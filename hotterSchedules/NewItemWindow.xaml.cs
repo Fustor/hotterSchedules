@@ -106,8 +106,11 @@ namespace hotterSchedules
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             TextBox tb = (TextBox)sender;
+           
             tb.Text = string.Empty;
             tb.GotFocus -= TextBox_GotFocus;
         }
+        
+
     }
 }

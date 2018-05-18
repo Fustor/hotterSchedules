@@ -5,4 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:hotterSchedules"
         mc:Ignorable="d"
-        Title="Window1" WindowStartupLocation="CenterOwner"/>
+        Title="Window1" WindowStartupLocation="CenterOwner">
+    <Label x:Name="UserLabel" Content="Label"/>
+
+</Window>

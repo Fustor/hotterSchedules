@@ -47,7 +47,7 @@ namespace hotterSchedules
             }
             */
             
-            var context = new MyContext();
+           // var context = new MyContext();
            
             InitializeComponent();
         }
@@ -57,8 +57,12 @@ namespace hotterSchedules
             /*
              * TODO:
              * 1. DONE: delete all garbage currently int database
-             * 2. create new restaurant if it doesnt already exist
+             * 2. DONE: create new restaurant if it doesnt already exist
              * 3. employee creation/login
+             * 4. Show Schedule
+             * 5. Modify Schedule
+             * 6. Modify employee jobs
+             * 7. DONE: Select restaurant from list of ones with the same name
              */
             var context = new MyContext();
 
@@ -67,18 +71,21 @@ namespace hotterSchedules
 
             var SelectedRestaurant = (from s in context.Restaurants where s.name == RestaurantName select s ).ToList<Restaurant>();//grabs entities where their .name is equal to RestaurantName
 
-            if(SelectedRestaurant.Count() > 0)
+            if(SelectedRestaurant.Count() == 1)
             {
                 Restaurant curRest = SelectedRestaurant[0];//creates a Restaurant object curRest from a Single entity selected above, error is more than one is selected
-                MessageBox.Show(username + curRest.name);
+                //MessageBox.Show(username + curRest.name);
 
-                Window1 Window = new Window1();
+                Window1 Window = new Window1(username,curRest.restaurantID);
                 Window.Show();
                 this.Close();
             }
-            if(SelectedRestaurant.Count() > 1)
+            else if(SelectedRestaurant.Count() > 1)
             {
                 //create new window asking for restaurantID, select that restaurant from list of current restaurants
+                Window SelectFromMultipleRestaurtsWindow = new SelectFromMultipleRestaurants(username,RestaurantName);
+                SelectFromMultipleRestaurtsWindow.Show();
+                this.Close();
 
             }
             else

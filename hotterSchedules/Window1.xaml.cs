@@ -19,9 +19,14 @@ namespace hotterSchedules
     /// </summary>
     public partial class Window1 : Window
     {
-        public Window1()
+        String Username, RestaurantID;
+        public Window1(String name,String restaurantID)
         {
+            Username = name;
+            RestaurantID = restaurantID;
+            
             InitializeComponent();
+            UserLabel.Content = Username;
         }
     }
 }
