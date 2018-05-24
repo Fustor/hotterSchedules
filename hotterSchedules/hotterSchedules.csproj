@@ -68,6 +68,9 @@
     </Compile>
     <Compile Include="Restaurant.cs" />
     <Compile Include="Schedule.cs" />
+    <Compile Include="ScheduleView.xaml.cs">
+      <DependentUpon>ScheduleView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SelectFromMultipleRestaurants.xaml.cs">
       <DependentUpon>SelectFromMultipleRestaurants.xaml</DependentUpon>
     </Compile>
@@ -87,6 +90,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="NewItemWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScheduleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
