@@ -20,18 +20,20 @@ namespace hotterSchedules
     /// </summary>
     public partial class EmployeeViewer : Window
     {
-        
-        public EmployeeViewer()
+        String RestaurantID;
+        public EmployeeViewer(String RestID)
         {
+            RestaurantID = RestID;
             
             InitializeComponent();
-            populateEmployees();
+            PopulateEmployees();
 
         }
-        public void populateEmployees()
+        public void PopulateEmployees()
         {
             var db = new MyContext();
-            EmployeeDataGrid.ItemsSource = db.Employees.ToList();
+            var Employees = (from e in db.Employees where e.restaurantID == RestaurantID select e).ToList();
+            EmployeeDataGrid.ItemsSource = Employees;
         }
 
         

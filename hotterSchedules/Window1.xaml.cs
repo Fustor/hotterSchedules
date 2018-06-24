@@ -23,7 +23,7 @@ namespace hotterSchedules
 
         private void EmployeesButton_Click(object sender, RoutedEventArgs e)
         {
-            EmployeeViewer EmployeeViewWindow = new EmployeeViewer();
+            EmployeeViewer EmployeeViewWindow = new EmployeeViewer(RestaurantID);
             EmployeeViewWindow.Show();
         }
 

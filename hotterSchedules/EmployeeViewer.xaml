@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:hotterSchedules"
         mc:Ignorable="d"
-        Title="EmployeeViewer" Height="300" Width="300">
+        Title="EmployeeViewer" Height="300" Width="766.667">
     <Grid x:Name="Employee">
-        <DataGrid x:Name="EmployeeDataGrid" HorizontalAlignment="Left" Height="269" VerticalAlignment="Top" Width="292">
+        <DataGrid x:Name="EmployeeDataGrid" Height="269" Width="759">
             <DataGrid.Columns>
                 
             </DataGrid.Columns>
