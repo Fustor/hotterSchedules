@@ -20,13 +20,20 @@ namespace hotterSchedules
     public partial class Window1 : Window
     {
         String Username, RestaurantID;
+
+        private void EmployeesButton_Click(object sender, RoutedEventArgs e)
+        {
+            EmployeeViewer EmployeeViewWindow = new EmployeeViewer();
+            EmployeeViewWindow.Show();
+        }
+
         public Window1(String name,String restaurantID)
         {
             Username = name;
             RestaurantID = restaurantID;
             
             InitializeComponent();
-            UserLabel.Content = Username;
+           // UserLabel.Content = Username;
         }
     }
 }

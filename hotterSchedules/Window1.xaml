@@ -6,6 +6,6 @@
         xmlns:local="clr-namespace:hotterSchedules"
         mc:Ignorable="d"
         Title="Window1" WindowStartupLocation="CenterOwner">
-    <Label x:Name="UserLabel" Content="Label"/>
+    <Button x:Name="EmployeesButton" Content="Employees" HorizontalAlignment="Left" Margin="242,464,0,0" VerticalAlignment="Top" Width="74" RenderTransformOrigin="-2.108,0.35" Click="EmployeesButton_Click"/>
 
 </Window>

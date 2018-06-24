@@ -38,7 +38,7 @@ namespace hotterSchedules
             if (NewEmployeeRadioButton.IsChecked == true)
             {
                 String RestaurantID = EmployeeRestaurantIDTextbox.Text;
-                Employee NewEmployee = new Employee(Name, ID);
+                Employee NewEmployee = new Employee(Name, ID, RestaurantID);
                 using (var db = new MyContext())//adds the employee to their restaurants employeeList and creates employee
                 {
                    
@@ -46,7 +46,7 @@ namespace hotterSchedules
                     if (CurrentRestaurant != null)
                     {
 
-                        CurrentRestaurant.AddEmployee(NewEmployee.EmployeeID);
+                        
                         db.Employees.Add(NewEmployee);
                         db.SaveChanges();
 

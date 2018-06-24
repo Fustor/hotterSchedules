@@ -10,9 +10,9 @@ namespace hotterSchedules
     public class Schedule
     {
         [Key]
-        public int scheduleID { get; set; }
-        public int numberOfDays { get; set; }
-        public List<WorkDay> daysWorking { get; set; }
+        public int ScheduleID { get; set; }
+        public int NumberOfDays { get; set; }
+        public List<WorkDay> DaysWorking { get; set; }
 
         [Required]
         public virtual Employee Employee { get; set; }
@@ -20,9 +20,9 @@ namespace hotterSchedules
 
     public struct WorkDay
     {
-        public DateTime day;
-        public String clockIn;
-        public String clockOut;
-        public String position;
+        public DateTime Day;
+        public String ClockIn;
+        public String ClockOut;
+        public String Position;
     }
 }

@@ -21,7 +21,14 @@ namespace hotterSchedules
     {
         public ScheduleView()
         {//TODO: Find how to show the schedule on a datagrid
+            //NEW IDEAS: desktop app for managers only, modify schedule by job type, sends email to employees upon publishing
             InitializeComponent();
+            List<String> a = new List<String>();
+            a.Add("a");
+            a.Add("b");
+            DataGridTextColumn firstColumn = new DataGridTextColumn();
+            firstColumn.Header = "Daga";
+            ScheduleDataGrid.Columns.Add(firstColumn);
         }
     }
 }

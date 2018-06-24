@@ -1,12 +1,16 @@
-﻿<Window x:Class="hotterSchedules.ScheduleView"
+﻿<Window x:Class="hotterSchedules.EmployeeViewer"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:hotterSchedules"
         mc:Ignorable="d"
-        Title="ScheduleView" Height="300" Width="300">
-    <Grid>
-        <DataGrid x:Name="ScheduleDataGrid" HorizontalAlignment="Left" Height="249" Margin="10,10,0,0" VerticalAlignment="Top" Width="272"/>
+        Title="EmployeeViewer" Height="300" Width="300">
+    <Grid x:Name="Employee">
+        <DataGrid x:Name="EmployeeDataGrid" HorizontalAlignment="Left" Height="269" VerticalAlignment="Top" Width="292">
+            <DataGrid.Columns>
+                
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

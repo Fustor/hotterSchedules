@@ -10,18 +10,19 @@ namespace hotterSchedules
 {
     public class Employee
     {
-        public Employee(string employeeName, String id)
+        public Employee(string employeeName, String id,String RestaurantID)
         {
             name = employeeName;
             EmployeeID = id;
-            
+            restaurantID = RestaurantID;
 
         }
 
         public Employee() { }
         [Key]
         public String EmployeeID { get; set; }
-
+        [ForeignKey("Restaurant")]
+        public String restaurantID { get; set; }
         
         public String name { get; set; }
         public List<String> Jobs { get; set; }
@@ -29,7 +30,7 @@ namespace hotterSchedules
         public List<String> UnavailableTimes { get; set; }
         public List<String> RequestsOff { get; set; }
 
-        //[Required]
-         //public Restaurant Restaurant { get; set; }
+        [Required]
+        public Restaurant Restaurant { get; set; }
     }
 }
