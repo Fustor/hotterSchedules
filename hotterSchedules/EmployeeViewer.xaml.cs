@@ -21,6 +21,7 @@ namespace hotterSchedules
     public partial class EmployeeViewer : Window
     {
         String RestaurantID;
+        MyContext db = new MyContext();
         public EmployeeViewer(String RestID)
         {
             RestaurantID = RestID;
@@ -29,13 +30,23 @@ namespace hotterSchedules
             PopulateEmployees();
 
         }
-        public void PopulateEmployees()
+        public void PopulateEmployees()//add employees to datagrid and combobox, combobox only displays their names
         {
-            var db = new MyContext();
+            
             var Employees = (from e in db.Employees where e.restaurantID == RestaurantID select e).ToList();
             EmployeeDataGrid.ItemsSource = Employees;
+            EmployeeComboBox.ItemsSource = Employees;
+            EmployeeComboBox.DisplayMemberPath = "name";
+            
         }
 
-        
+        private void ModifyEmployeeButton_Click(object sender, RoutedEventArgs e)//takes combobox selection, casts it to employee object and passes it to the new window
+        {
+            Employee SelectedEmployee = (Employee) EmployeeComboBox.SelectedItem;
+            
+            ModifyEmployeeWindow ModifyEmployee = new ModifyEmployeeWindow(SelectedEmployee,db);
+            ModifyEmployee.Show();
+            
+        }
     }
 }

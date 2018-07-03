@@ -65,6 +65,9 @@
     <Compile Include="EmployeeViewer.xaml.cs">
       <DependentUpon>EmployeeViewer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ModifyEmployeeWindow.xaml.cs">
+      <DependentUpon>ModifyEmployeeWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyContext.cs" />
     <Compile Include="NewItemWindow.xaml.cs">
       <DependentUpon>NewItemWindow.xaml</DependentUpon>
@@ -96,6 +99,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ModifyEmployeeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="NewItemWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

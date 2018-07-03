@@ -15,7 +15,7 @@ namespace hotterSchedules
             name = employeeName;
             EmployeeID = id;
             restaurantID = RestaurantID;
-
+            
         }
 
         public Employee() { }

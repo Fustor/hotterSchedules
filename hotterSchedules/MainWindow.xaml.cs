@@ -75,7 +75,6 @@ namespace hotterSchedules
             {
                 Restaurant curRest = SelectedRestaurant[0];//creates a Restaurant object curRest from a Single entity selected above, error is more than one is selected
                 //MessageBox.Show(username + curRest.name);
-
                 Window1 Window = new Window1(username,curRest.restaurantID);
                 Window.Show();
                 this.Close();
