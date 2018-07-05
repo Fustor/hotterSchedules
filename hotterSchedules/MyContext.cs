@@ -14,7 +14,9 @@ namespace hotterSchedules
         public virtual DbSet<Restaurant> Restaurants { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Schedule> Schedules { get; set; }
-        
+        public virtual DbSet<Job> Jobs { get; set; }
+        public virtual DbSet<RequestOff> RequestsOff { get; set; } 
+        public virtual DbSet<UnavailableTime> UnavailableTimes { get; set; }
        
 
 

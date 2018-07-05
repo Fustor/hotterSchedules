@@ -19,14 +19,30 @@ namespace hotterSchedules
     /// </summary>
     public partial class ModifyEmployeeWindow : Window
     {
+        Employee CurEmployee;
+        MyContext data;
         public ModifyEmployeeWindow(Employee CurrentEmployee, MyContext db)
         {//TODO: store job relations in new table
+            data = db;
+            CurEmployee = CurrentEmployee;
             var SelectedEmployee = db.Employees.SingleOrDefault(i => i.EmployeeID == CurrentEmployee.EmployeeID);
             //SelectedEmployee.name = "Dave";//this sucessfully changes name
            // db.SaveChanges();
             InitializeComponent();
             NameLabel.Content = CurrentEmployee.name;
             IdLabel.Content = CurrentEmployee.EmployeeID;
+        }
+
+        private void RestaurantButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void JobButton_Click(object sender, RoutedEventArgs e)
+        {
+           
+            AddJobWindow JobWindow = new AddJobWindow(CurEmployee, data);
+            JobWindow.Show();
         }
     }
 }

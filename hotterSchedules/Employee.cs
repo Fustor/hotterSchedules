@@ -25,10 +25,9 @@ namespace hotterSchedules
         public String restaurantID { get; set; }
         
         public String name { get; set; }
-        public List<String> Jobs { get; set; }
+       
         public Schedule EmployeeSchedule { get; set; }
-        public List<String> UnavailableTimes { get; set; }
-        public List<String> RequestsOff { get; set; }
+        
 
         [Required]
         public Restaurant Restaurant { get; set; }

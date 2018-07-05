@@ -61,10 +61,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddJobWindow.xaml.cs">
+      <DependentUpon>AddJobWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeViewer.xaml.cs">
       <DependentUpon>EmployeeViewer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Job.cs" />
     <Compile Include="ModifyEmployeeWindow.xaml.cs">
       <DependentUpon>ModifyEmployeeWindow.xaml</DependentUpon>
     </Compile>
@@ -72,6 +76,7 @@
     <Compile Include="NewItemWindow.xaml.cs">
       <DependentUpon>NewItemWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RequestOff.cs" />
     <Compile Include="Restaurant.cs" />
     <Compile Include="Schedule.cs" />
     <Compile Include="ScheduleView.xaml.cs">
@@ -80,9 +85,14 @@
     <Compile Include="SelectFromMultipleRestaurants.xaml.cs">
       <DependentUpon>SelectFromMultipleRestaurants.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UnavailableTime.cs" />
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddJobWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EmployeeViewer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
