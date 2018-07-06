@@ -48,5 +48,12 @@ namespace hotterSchedules
             ModifyEmployee.Show();
             
         }
+
+        private void ViewScheduleButton_Click(object sender, RoutedEventArgs e)
+        {
+            Employee SelectedEmployee = (Employee)EmployeeComboBox.SelectedItem;
+            ViewEmployeeSchedule ViewSchedule = new ViewEmployeeSchedule(SelectedEmployee, db);
+            ViewSchedule.Show();
+        }
     }
 }

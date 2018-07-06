@@ -86,6 +86,9 @@
       <DependentUpon>SelectFromMultipleRestaurants.xaml</DependentUpon>
     </Compile>
     <Compile Include="UnavailableTime.cs" />
+    <Compile Include="ViewEmployeeSchedule.xaml.cs">
+      <DependentUpon>ViewEmployeeSchedule.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -122,6 +125,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SelectFromMultipleRestaurants.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewEmployeeSchedule.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

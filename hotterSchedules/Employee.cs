@@ -21,12 +21,13 @@ namespace hotterSchedules
         public Employee() { }
         [Key]
         public String EmployeeID { get; set; }
+
         [ForeignKey("Restaurant")]
         public String restaurantID { get; set; }
         
         public String name { get; set; }
        
-        public Schedule EmployeeSchedule { get; set; }
+       
         
 
         [Required]

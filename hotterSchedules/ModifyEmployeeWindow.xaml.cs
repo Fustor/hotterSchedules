@@ -33,10 +33,7 @@ namespace hotterSchedules
             IdLabel.Content = CurrentEmployee.EmployeeID;
         }
 
-        private void RestaurantButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
 
         private void JobButton_Click(object sender, RoutedEventArgs e)
         {

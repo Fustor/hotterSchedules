@@ -40,6 +40,7 @@ namespace hotterSchedules
             Job ThisJob = new Job(CurEmployee.EmployeeID, JobTextBox.Text);
             data.Jobs.Add(ThisJob);
             data.SaveChanges();
+            this.Close();
         }
     }
 }
