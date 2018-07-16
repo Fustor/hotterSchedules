@@ -9,7 +9,9 @@
     <Grid>
         <Label x:Name="EmployeeNameLabel" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.434,0.484"/>
         <DataGrid x:Name="ScheduleGrid" HorizontalAlignment="Left" Height="218" Margin="10,41,0,0" VerticalAlignment="Top" Width="258"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="276" VerticalAlignment="Top" Width="286"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="276" VerticalAlignment="Top" Width="286">
+            <Button x:Name="DeleteItemButton" Content="Delete Item" Margin="146,9,68,241" Click="DeleteItemButton_Click"/>
+        </Border>
         <Calendar x:Name="ScheduleCalendar" HorizontalAlignment="Left" Margin="291,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Clock In:" HorizontalAlignment="Left" Margin="484,18,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TimeInTextbox" HorizontalAlignment="Left" Height="23" Margin="484,49,0,0" TextWrapping="Wrap" Text="Time In" VerticalAlignment="Top" Width="120"/>
@@ -18,6 +20,7 @@
         <Button x:Name="AddToScheduleButton" Content="Add To Schedule" HorizontalAlignment="Left" Margin="484,185,0,0" VerticalAlignment="Top" Width="120" Click="AddToScheduleButton_Click"/>
         <Label Content="Job" HorizontalAlignment="Left" Margin="494,131,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="JobTextbox" HorizontalAlignment="Left" Height="23" Margin="484,157,0,0" TextWrapping="Wrap" Text="Job" VerticalAlignment="Top" Width="120"/>
+       
 
     </Grid>
 </Window>
